@@ -14,3 +14,15 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+$(function() {
+
+  $('#list_food').click(function() {
+    $('#food_list').toggle();
+  });
+
+  $('#list_exercises').click(function() {
+    $('#exercise_list').toggle();
+  });
+
+});

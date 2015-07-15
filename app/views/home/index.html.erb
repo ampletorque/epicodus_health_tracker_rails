@@ -1,4 +1,30 @@
 
-<p>total food calories: <%= @user.total_food_calories %></p>
+<h1>Welcome to Health Tracker</h1>
+<br>
+  <div class="col-md-6">
+    <h5>Foods</h5>
+    <div class='btn btn-warning' name="List Food" id="list_food"></div>
+
+    <div id="food_list">
+      <ul>
+        <% @foods.each do |food| %>
+          <li><%= food.name  %></li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <h5>Exercises</h5>
+    <div class='btn btn-warning' name="List Exercises" id="list_exercises"></div>
+
+    <div id="exercise_list">
+      <ul>
+        <% @exercises.each do |exercise| %>
+          <li><%= exercise.name  %></li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+<p>calories consumed: <%= @user.total_food_calories %></p>
 <p>total exercise calories: <%= @user.total_exercise_calories %></p>
 <p>net calories: <%= @user.net_calories %></p>
