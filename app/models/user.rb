@@ -12,13 +12,14 @@ class User < ActiveRecord::Base
 
   def total_food_calories
     # binding.pry
-    calories_array = self.foods.map { |food| food.calories}
+    calories_array = self.foods.map { |food| food.calories }
     calories_array.inject {|total, n| total + n}
   end
 
   def total_exercise_calories
     # return self.exercises.calories_used.all.inject {|total, n| total + n}
-    return 1
+    calories_array = self.exercises.map { |exercise| exercise.calories_used }
+    calories_array.inject { |total, n| total + n }
   end
 
   def net_calories
